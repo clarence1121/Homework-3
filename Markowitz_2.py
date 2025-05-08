@@ -280,8 +280,6 @@ if __name__ == "__main__":
 
     judge = AssignmentJudge()
 
-    # --- 新增開始：計算並印出策略的總報酬和夏普比率 ---
-    print("\n--- MyPortfolio Strategy Performance ---")
 
     # 期間: 2019-2024 (使用 df 和 judge.mp)
     portfolio_returns_2019_2024 = judge.mp[1]['Portfolio']
@@ -289,9 +287,9 @@ if __name__ == "__main__":
     sharpe_ratios_2019_2024 = judge.report_metrics(df, judge.mp) # 取得包含 SPY 和 MP 的夏普比率 Series
     portfolio_sharpe_2019_2024 = sharpe_ratios_2019_2024['MP'] # 從 Series 中選取 'MP' (MyPortfolio)
 
-    print("\nPeriod: 2019-2024")
-    print(f"  Total Return: {total_return_2019_2024:.4f}")
-    print(f"  Sharpe Ratio: {portfolio_sharpe_2019_2024:.4f}")
+    # print("\nPeriod: 2019-2024")
+    # print(f"  Total Return: {total_return_2019_2024:.4f}")
+    # print(f"  Sharpe Ratio: {portfolio_sharpe_2019_2024:.4f}")
 
     # 期間: 2012-2024 (使用 Bdf 和 judge.Bmp)
     portfolio_returns_2012_2024 = judge.Bmp[1]['Portfolio']
@@ -299,10 +297,10 @@ if __name__ == "__main__":
     sharpe_ratios_2012_2024 = judge.report_metrics(Bdf, judge.Bmp) # 取得包含 SPY 和 MP 的夏普比率 Series
     portfolio_sharpe_2012_2024 = sharpe_ratios_2012_2024['MP'] # 從 Series 中選取 'MP' (MyPortfolio)
     
-    print("\nPeriod: 2012-2024")
-    print(f"  Total Return: {total_return_2012_2024:.4f}")
-    print(f"  Sharpe Ratio: {portfolio_sharpe_2012_2024:.4f}")
-    print("--- End of MyPortfolio Strategy Performance ---\n")
+    # print("\nPeriod: 2012-2024")
+    # print(f"  Total Return: {total_return_2012_2024:.4f}")
+    # print(f"  Sharpe Ratio: {portfolio_sharpe_2012_2024:.4f}")
+    # print("--- End of MyPortfolio Strategy Performance ---\n")
     # --- 新增結束 ---
 
     if args.score:

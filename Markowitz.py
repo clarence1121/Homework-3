@@ -86,7 +86,6 @@ class EqualWeightPortfolio:
             .mul(self.portfolio_weights[assets])
             .sum(axis=1)
         )
-        print(self.portfolio_returns["Portfolio"].head())
 
     def get_results(self):
         # Ensure portfolio returns are calculated
@@ -155,7 +154,6 @@ class RiskParityPortfolio:
             .mul(self.portfolio_weights[assets])
             .sum(axis=1)
         )
-        print(self.portfolio_returns["Portfolio"].head())
 
     def get_results(self):
         # Ensure portfolio returns are calculated
@@ -270,7 +268,6 @@ class MeanVariancePortfolio:
             .mul(self.portfolio_weights[assets])
             .sum(axis=1)
         )
-        print(self.portfolio_returns["Portfolio"].head())
 
     def get_results(self):
         # Ensure portfolio returns are calculated
